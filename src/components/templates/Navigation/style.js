@@ -44,9 +44,18 @@ export const HeaderButtomLinks = styled(Link)`
   line-height: 160%;
 `;
 
+export const HeaderButtomLinksRed = styled(Link)`
+  color: #424551;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 160%;
+  color: #ff4242;
+`;
 export const SearchHeader = styled(Input)`
   height: 45px;
-  width: 300px;
+  width: 320px;
   border: none;
   border-color: #d7dadd;
   border-radius: 5px;
@@ -59,10 +68,29 @@ export const SearchHeader = styled(Input)`
 `;
 
 export const SearchHeaderButton = styled(Button)`
+  margin-left: 10px;
   span {
     display: none;
   }
-  .MuiButtonBase-root {
-    min-width: auto;
+  &:hover {
+    background-color: none;
   }
+  min-width: 20px;
+`;
+
+export const HeaderButtomLinksHeart = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const BottomHeaderNumber = styled(Typography)`
+  width: 23px;
+  height: 20px;
+  background-color: #03cea4;
+  color: #ffffff;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
