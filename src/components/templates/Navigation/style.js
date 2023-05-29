@@ -50,6 +50,12 @@ export const SearchHeader = styled(Input)`
   border: none;
   border-color: #d7dadd;
   border-radius: 5px;
+  &::before {
+    all: unset;
+  }
+  &::after {
+    all: unset;
+  }
 `;
 
 export const SearchHeaderButton = styled(Button)`

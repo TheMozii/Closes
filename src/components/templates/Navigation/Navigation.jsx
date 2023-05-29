@@ -65,10 +65,7 @@ const Navigation = () => {
           justifyContent={"right"}
         >
           <SearchHeader
-            sx={{
-              "&::before": { all: "unset" },
-              "&::after": { all: "unset" },
-            }}
+
             placeholder="Search for products..."
           />
           <SearchHeaderButton
