@@ -62,6 +62,7 @@ const Navigation = () => {
           alignItems={"center"}
           borderRadius={"5px"}
           borderColor={"#D7DADD"}
+          justifyContent={"right"}
         >
           <SearchHeader
             sx={{
