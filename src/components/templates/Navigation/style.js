@@ -94,3 +94,33 @@ export const BottomHeaderNumber = styled(Typography)`
   align-items: center;
   justify-content: center;
 `;
+
+export const SpecialOffers = styled(Grid)`
+  background: #17696a;
+`;
+
+export const SpecialOffersHeaderButton = styled(Button)`
+  padding: 0px;
+  span {
+    display: none;
+  }
+  &:hover {
+    background-color: none;
+  }
+  min-width: 0px;
+`;
+
+export const SpecialOffersLinkLeft = styled(Link)`
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 150%;
+`;
+
+export const SpecialOffersLinkRight = styled(Link)`
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+`;

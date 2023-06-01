@@ -5,7 +5,7 @@ import { Wrapper } from "./style";
 const Homepage = () => {
   return (
     <Grid container>
-      <Wrapper xs={6}>ku</Wrapper>
+      <Wrapper xs={6}></Wrapper>
     </Grid>
   );
 };

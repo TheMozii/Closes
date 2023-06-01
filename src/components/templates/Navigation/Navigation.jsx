@@ -12,15 +12,21 @@ import {
   BottomHeaderNumber,
   HeaderButtomLinksRed,
   HeaderButtomLinksHeart,
+  SpecialOffers,
+  SpecialOffersHeaderButton,
+  SpecialOffersLinkLeft,
+  SpecialOffersLinkRight,
 } from "./style";
-import USAFlag from "../../../assets/Icon/Navbar/flag-usa.svg";
-import DovnChevron from "../../../assets/Icon/Navbar/Line (Stroke).svg";
-import MenIcon from "../../../assets/Icon/Navbar/men.svg";
-import Logo from "../../../assets/Icon/Navbar/logo.svg";
-import Searge from "../../../assets/Icon/Navbar/Vector (Stroke).svg";
-import Heart from "../../../assets/Icon/Navbar/Heart/Vector (Stroke).svg";
-import Divider from "../../../assets/Icon/Navbar/divider.svg";
-import Cart from "../../../assets/Icon/Navbar/Cart.svg";
+import USAFlag from "../../../assets/Icon/Header/Navbar/flag-usa.svg";
+import DovnChevron from "../../../assets/Icon/Header/Navbar/Line (Stroke).svg";
+import MenIcon from "../../../assets/Icon/Header/Navbar/men.svg";
+import Logo from "../../../assets/Icon/Header/Navbar/logo.svg";
+import Searge from "../../../assets/Icon/Header/Navbar/Vector (Stroke).svg";
+import Heart from "../../../assets/Icon/Header/Navbar/Heart/Vector (Stroke).svg";
+import Divider from "../../../assets/Icon/Header/Navbar/divider.svg";
+import Cart from "../../../assets/Icon/Header/Navbar/Cart.svg";
+import LeftLine from "../../../assets/Icon/Header/SpecialOffers/LeftLine.svg";
+import RightLine from "../../../assets/Icon/Header/SpecialOffers/RightLine.svg";
 import { Link } from "react-router-dom";
 
 const Navigation = () => {
@@ -121,6 +127,33 @@ const Navigation = () => {
           </Grid>
         </Grid>
       </BottomHeader>
+      <SpecialOffers
+        height={"34px"}
+        container
+        xs={12}
+        justifyContent={"center"}
+      >
+        <Grid
+          width={"275px"}
+          container
+          justifyContent={"space-between"}
+          alignItems={"center"}
+        >
+          <SpecialOffersHeaderButton>
+            <img src={LeftLine} alt="" />
+          </SpecialOffersHeaderButton>
+
+          <Grid container xs={"auto"} gap={"4px"}>
+            <SpecialOffersLinkLeft>Up to 70% Off. </SpecialOffersLinkLeft>
+            <SpecialOffersLinkRight>
+              Shop our latest sale styles
+            </SpecialOffersLinkRight>
+          </Grid>
+          <SpecialOffersHeaderButton>
+            <img src={RightLine} alt="" />
+          </SpecialOffersHeaderButton>
+        </Grid>
+      </SpecialOffers>
     </Header>
   );
 };
