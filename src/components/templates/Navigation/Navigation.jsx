@@ -16,6 +16,10 @@ import {
   SpecialOffersHeaderButton,
   SpecialOffersLinkLeft,
   SpecialOffersLinkRight,
+  LanguageHeaderButton,
+  AvailableHeaderText,
+  HeaderTopLogText,
+  HeaderLog,
 } from "./style";
 import USAFlag from "../../../assets/Icon/Header/Navbar/flag-usa.svg";
 import DovnChevron from "../../../assets/Icon/Header/Navbar/Line (Stroke).svg";
@@ -34,7 +38,9 @@ const Navigation = () => {
     <Header container>
       <TopHeader container xs={12}>
         <Grid container xs={4} justifyContent={"center"}>
-          <HeaderText>Available 24/7 at (405) 555-0128</HeaderText>
+          <AvailableHeaderText>
+            Available 24/7 at (405) 555-0128
+          </AvailableHeaderText>
         </Grid>
         <Grid container xs={4} justifyContent={"center"} gap={"32px"}>
           <HeaderTopLinks to={"/"}>Delivery & returns</HeaderTopLinks>
@@ -45,16 +51,19 @@ const Navigation = () => {
         <Grid container xs={4} justifyContent={"center"} gap={"60px"}>
           <Grid container xs={"auto"} alignContent={"center"}>
             <img src={USAFlag} alt="" />
-            <HeaderText paddingLeft={"12px"} paddingRight={"6px"}>
-              Eng / $
-            </HeaderText>
-            <img src={DovnChevron} alt="" />
+
+            <LanguageHeaderButton>
+              <HeaderText paddingLeft={"12px"} paddingRight={"6px"}>
+                Eng / $
+              </HeaderText>
+              <img src={DovnChevron} alt="" />
+            </LanguageHeaderButton>
           </Grid>
 
-          <Grid container xs={"auto"} alignContent={"center"} gap={"9px"}>
+          <HeaderLog>
             <img src={MenIcon} alt="" />
-            <HeaderTopLinks to={"/"}>Log in / Register</HeaderTopLinks>
-          </Grid>
+            <HeaderTopLogText>Log in / Register</HeaderTopLogText>
+          </HeaderLog>
         </Grid>
       </TopHeader>
       <BottomHeader

@@ -2,8 +2,23 @@ import { Grid, Typography, Input, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Header = styled(Grid)`
-  height: 130px;
+export const Header = styled(Grid)``;
+
+export const LanguageHeaderButton = styled(Button)`
+  transition: all 0.5s;
+  opacity: 0.6;
+  &:hover {
+    opacity: 1;
+  }
+  text-transform: none;
+  padding: 0px;
+  span {
+    display: none;
+  }
+  :hover {
+    background-color: unset;
+  }
+  min-width: 0px;
 `;
 
 export const TopHeader = styled(Grid)`
@@ -14,21 +29,58 @@ export const TopHeader = styled(Grid)`
   flex-wrap: nowrap;
 `;
 
-export const HeaderText = styled(Typography)`
+export const AvailableHeaderText = styled(Typography)`
   color: white;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
+  opacity: 0.6;
+`;
+export const HeaderText = styled(Typography)`
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+`;
+
+export const HeaderLog = styled(Button)`
+  opacity: 0.6;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 1;
+  }
+  text-transform: none;
+  padding: 0px;
+  span {
+    display: none;
+  }
+  :hover {
+    background-color: unset;
+  }
+  min-width: 0px;
+`;
+
+export const HeaderTopLogText = styled(Typography)`
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 150%;
+  margin-left: 9px;
 `;
 
 export const HeaderTopLinks = styled(Link)`
   text-decoration: none;
   color: white;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 150%;
+  opacity: 0.6;
+  transition: all 0.5s;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export const BottomHeader = styled(Grid)`
@@ -105,7 +157,7 @@ export const SpecialOffersHeaderButton = styled(Button)`
     display: none;
   }
   &:hover {
-    background-color: none;
+    background-color: unset;
   }
   min-width: 0px;
 `;
@@ -120,7 +172,6 @@ export const SpecialOffersLinkLeft = styled(Link)`
 
 export const SpecialOffersLinkRight = styled(Link)`
   color: white;
-  font-weight: 400;
   font-size: 12px;
   line-height: 150%;
 `;
