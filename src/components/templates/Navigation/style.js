@@ -1,6 +1,8 @@
 import { Grid, Typography, Input, Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import LeftLine from "../../../assets/Icon/Header/SpecialOffers/LeftLine.svg";
 
 export const Header = styled(Grid)``;
 
@@ -125,12 +127,18 @@ export const SearchHeaderButton = styled(Button)`
     display: none;
   }
   &:hover {
-    background-color: none;
+    background-color: white;
   }
   min-width: 20px;
 `;
 
 export const HeaderButtomLinksHeart = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const HeaderButtomLinksCart = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,27 +159,51 @@ export const SpecialOffers = styled(Grid)`
   background: #17696a;
 `;
 
-export const SpecialOffersHeaderButton = styled(Button)`
-  padding: 0px;
-  span {
-    display: none;
-  }
-  &:hover {
-    background-color: unset;
-  }
-  min-width: 0px;
+export const SpecialOffersLinks = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
 `;
 
-export const SpecialOffersLinkLeft = styled(Link)`
-  text-decoration: none;
+export const SpecialOffersLinkLeft = styled(Typography)`
+  width: 85px;
   color: white;
   font-weight: 900;
   font-size: 12px;
   line-height: 150%;
 `;
 
-export const SpecialOffersLinkRight = styled(Link)`
+export const SpecialOffersLinkRight = styled(Typography)`
+  width: 145px;
   color: white;
   font-size: 12px;
   line-height: 150%;
+  text-decoration: underline;
+`;
+
+export const SpecialOffersSplide = styled(Splide)`
+  width: 350px;
+
+  .splide__pagination {
+    display: none;
+  }
+
+  .splide__track {
+    width: 300px;
+  }
+
+  .splide__arrow {
+    background: none;
+    opacity: 1;
+    width: 15px;
+    height: 15px;
+  }
+
+  .splide__arrow svg {
+    fill: white;
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

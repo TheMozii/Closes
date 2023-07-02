@@ -1,5 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import { React } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import {
   Header,
   HeaderText,
@@ -13,13 +14,15 @@ import {
   HeaderButtomLinksRed,
   HeaderButtomLinksHeart,
   SpecialOffers,
-  SpecialOffersHeaderButton,
   SpecialOffersLinkLeft,
   SpecialOffersLinkRight,
   LanguageHeaderButton,
   AvailableHeaderText,
   HeaderTopLogText,
   HeaderLog,
+  HeaderButtomLinksCart,
+  SpecialOffersSplide,
+  SpecialOffersLinks,
 } from "./style";
 import USAFlag from "../../../assets/Icon/Header/Navbar/flag-usa.svg";
 import DovnChevron from "../../../assets/Icon/Header/Navbar/Line (Stroke).svg";
@@ -115,7 +118,7 @@ const Navigation = () => {
         >
           <Grid container alignItems={"center"} gap={"8px"}>
             <HeaderButtomLinksHeart to={"/"}>
-              <img src={Heart} alt="" />
+              <img src={Heart} alt="" cursor={"pointer"} />
             </HeaderButtomLinksHeart>
             <Typography
               width={"10px"}
@@ -131,7 +134,10 @@ const Navigation = () => {
 
           <img src={Divider} alt="" />
           <Grid container xs={"auto"} alignItems={"center"} gap={"9px"}>
-            <img src={Cart} alt="" />
+            <HeaderButtomLinksCart to={"/"}>
+              <img src={Cart} alt="" />
+            </HeaderButtomLinksCart>
+
             <BottomHeaderNumber>4</BottomHeaderNumber>
           </Grid>
         </Grid>
@@ -142,26 +148,38 @@ const Navigation = () => {
         xs={12}
         justifyContent={"center"}
       >
-        <Grid
-          width={"275px"}
-          container
-          justifyContent={"space-between"}
-          alignItems={"center"}
+        <SpecialOffersSplide
+          options={{
+            rewind: true,
+            gap: "1rem",
+          }}
+          aria-label="My Favorite Images"
         >
-          <SpecialOffersHeaderButton>
-            <img src={LeftLine} alt="" />
-          </SpecialOffersHeaderButton>
-
-          <Grid container xs={"auto"} gap={"4px"}>
-            <SpecialOffersLinkLeft>Up to 70% Off. </SpecialOffersLinkLeft>
-            <SpecialOffersLinkRight>
-              Shop our latest sale styles
-            </SpecialOffersLinkRight>
-          </Grid>
-          <SpecialOffersHeaderButton>
-            <img src={RightLine} alt="" />
-          </SpecialOffersHeaderButton>
-        </Grid>
+          <SplideSlide>
+            <SpecialOffersLinks>
+              <SpecialOffersLinkLeft>Up to 70% Off. </SpecialOffersLinkLeft>
+              <SpecialOffersLinkRight>
+                Shop our latest sale styles
+              </SpecialOffersLinkRight>
+            </SpecialOffersLinks>
+          </SplideSlide>
+          <SplideSlide>
+            <SpecialOffersLinks>
+              <SpecialOffersLinkLeft>Up to 71% Off. </SpecialOffersLinkLeft>
+              <SpecialOffersLinkRight>
+                Shop our latest sale styles
+              </SpecialOffersLinkRight>
+            </SpecialOffersLinks>
+          </SplideSlide>
+          <SplideSlide>
+            <SpecialOffersLinks>
+              <SpecialOffersLinkLeft>Up to 72% Off. </SpecialOffersLinkLeft>
+              <SpecialOffersLinkRight>
+                Shop our latest sale styles
+              </SpecialOffersLinkRight>
+            </SpecialOffersLinks>
+          </SplideSlide>
+        </SpecialOffersSplide>
       </SpecialOffers>
     </Header>
   );
